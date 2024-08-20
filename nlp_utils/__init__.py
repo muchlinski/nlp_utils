@@ -96,3 +96,6 @@ def spelling_correction(x):
 
 def get_basic_features(x):
     return utils._get_basic_features(x)
+
+def get_ngram(df, col, ngram_range):
+	return utils._get_ngram(df, col, ngram_range)
