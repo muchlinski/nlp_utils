@@ -4,10 +4,10 @@ with open('README.md', 'r') as file:
     long_description = file.read()
 
 setuptools.setup(
-    name='nlp_preprocess_mm',
+    name='nlp_utils',
     version='0.0.2',
     author='Maciej M',
-    description='This is preprocessing package',
+    description='This is NLP preprocessing package with common tools',
     long_description=long_description,
     long_description_content_type='text/markdown',
     packages=setuptools.find_packages(),
@@ -16,5 +16,5 @@ setuptools.setup(
         'License :: MIT License',
         'Operating System :: OS Independent'
     ],
-    python_requires='>=3.12'
+    python_requires='>=3.9'
 )

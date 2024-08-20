@@ -1,4 +1,4 @@
-from nlp_preprocess_mm import utils
+from nlp_utils import utils
 
 __version__ = '0.0.1'
 
