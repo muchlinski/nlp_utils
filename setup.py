@@ -5,7 +5,7 @@ with open('README.md', 'r') as file:
 
 setuptools.setup(
     name='nlp_preprocess_mm',
-    version='0.0.1',
+    version='0.0.2',
     author='Maciej M',
     description='This is preprocessing package',
     long_description=long_description,

@@ -93,3 +93,6 @@ def remove_rarewords(x, freq, n=20):
 
 def spelling_correction(x):
     return utils._spelling_correction(x)
+
+def get_basic_features(x):
+    return utils._get_basic_features(x)
