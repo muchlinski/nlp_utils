@@ -231,6 +231,10 @@ def _spelling_correction(x):
     x = TextBlob(x).correct()
     return x
 
+def _reduce_repeated_characters(x):
+	x = re.sub("(.)\\1{2,}", "\\1", x)
+	return x
+
 def _get_basic_features(df):
 	if type(df) == pd.core.frame.DataFrame:
 		df['char_counts'] = df['text'].apply(lambda x: _get_charcounts(x))
@@ -253,3 +257,15 @@ def _get_ngram(df, col, ngram_range):
 	ngram = sorted(ngram.items(), key = lambda x: x[1], reverse=True)
 
 	return ngram
+
+def _get_clean(x):
+    x = str(x).lower().replace('\\', ' ').replace('_', ' ').replace('.', ' ')
+    x = _cont_exp(x)
+    x = _remove_emails(x)
+    x = _remove_urls(x)
+    x = _remove_html_tags(x)
+    x = _remove_rt(x)
+    x = _remove_accented_chars(x)
+    x = _remove_special_chars(x)
+    x = _reduce_repeated_characters(x)
+    return x

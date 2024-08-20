@@ -99,3 +99,9 @@ def get_basic_features(x):
 
 def get_ngram(df, col, ngram_range):
 	return utils._get_ngram(df, col, ngram_range)
+
+def reduce_repeated_characters(x):
+    return utils._reduce_repeated_characters(x)
+
+def get_clean(x):
+    return utils._get_clean(x)
